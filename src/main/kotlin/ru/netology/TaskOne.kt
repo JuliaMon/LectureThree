@@ -1,7 +1,7 @@
 package ru.netology
 
 fun main() {
-    var seconds = 2592000L;
+    val seconds = 2592000L
 
     println(agoToText(seconds))
 }
@@ -21,7 +21,7 @@ fun compileMinutesText(seconds: Long): String {
     val minutes = seconds / 60
     val lastDigit = minutes % 10
 
-    var textMinutes = when {
+    val textMinutes = when {
         (lastDigit == 1L) -> "минуту"
         (lastDigit in 2L..4L) -> "минуты"
         else -> "минут"
@@ -35,7 +35,7 @@ fun compileHoursText(seconds: Long): String {
     val lastCharacter = hours % 10
     val lastTwoCharacret = hours % 100
 
-    var textHours =  when {
+    val textHours =  when {
         (lastCharacter == 1L) -> "час"
         (lastCharacter in 2L..4L) -> "часа"
         (lastTwoCharacret in 11L..14L) -> "часов "
